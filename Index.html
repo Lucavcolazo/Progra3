@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TO DO</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.jpg" class="header-icon">
+            <h1>Gestor de tareas</h1>
+        </div>
+        <div>
+            <h2 neclick="mostrarTareas('personal')">Personal</h2>
+            <h2 oneclick="mostrarTareas('universidad')">Universidad</h2>
+        </div>
+    </header>
+
+    <main>
+        <div id="personal" class="main-container">
+            <h2>Tareas Personales</h2>
+            <div class="task">
+                <h2>Tareas</h2>
+                <input type="text" id="nuevaTareaPersonal" placeholder="Nueva tarea">
+                <button onclick="agregarTarea('personal')">Agregar</button>
+                <div id="listaPersonal">
+                </div>
+                <div class="task">
+                    <input type="text" id="nuevaTareaPersonal" placeholder="Nueva tarea">
+                    <button onclick="agregarTarea('personal')">Agregar</button>
+                    <div id="listaPersonal">
+                    </div>
+                    <div class="task">
+                        <input type="text" id="nuevaTareaPersonal" placeholder="Nueva tarea">
+                        <button onclick="agregarTarea('personal')">Agregar</button>
+                        <div id="listaPersonal">
+                        </div>
+                        <div class="task">
+                            <input type="text" id="nuevaTareaPersonal" placeholder="Nueva tarea">
+                            <button onclick="agregarTarea('personal')">Agregar</button>
+                            <div id="listaPersonal">
+                            </div>
+                            <div class="task">
+                                <input type="text" id="nuevaTareaPersonal" placeholder="Nueva tarea">
+                                <button onclick="agregarTarea('personal')">Agregar</button>
+                                <div id="listaPersonal">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="universidad" class="main-container">
+                            <h2>Tareas de la Universidad</h2>
+                            <div class="task">
+                                <h2>Tareas</h2>
+                                <div class="task">
+                                    <input type="text" id="nuevaTareaUniversidad" placeholder="Nueva tarea">
+                                    <button onclick="agregarTarea('universidad')">Agregar</button>
+                                    <div id="listaUniversidad">
+                                    </div>
+                                    <div class="task">
+                                        <input type="text" id="nuevaTareaUniversidad" placeholder="Nueva tarea">
+                                        <button onclick="agregarTarea('universidad')">Agregar</button>
+                                        <div id="listaUniversidad">
+                                        </div>
+                                        <div class="task">
+                                            <input type="text" id="nuevaTareaUniversidad" placeholder="Nueva tarea">
+                                            <button onclick="agregarTarea('universidad')">Agregar</button>
+                                            <div id="listaUniversidad">
+                                            </div>
+                                            <div class="task">
+                                                <input type="text" id="nuevaTareaUniversidad" placeholder="Nueva tarea">
+                                                <button onclick="agregarTarea('universidad')">Agregar</button>
+                                                <div id="listaUniversidad">
+                                                </div>
+                                                <div class="task">
+                                                    <input type="text" id="nuevaTareaUniversidad"
+                                                        placeholder="Nueva tarea">
+                                                    <button onclick="agregarTarea('universidad')">Agregar</button>
+                                                    <div id="listaUniversidad">
+                                                    </div>
+                                                </div>
+                                            </div>
+    </main>
+</body>
+
+</html>
