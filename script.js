@@ -1,28 +1,26 @@
-function mostrarTareas(tipo) {
-    document.getElementById("personal").style.display = (tipo === 'personal') ? "block" : "none";
-    document.getElementById("universidad").style.display = (tipo === 'universidad') ? "block" : "none";
-}
-function agregarTarea(tipo) {
-    let inputId = tipo === 'personal' ? 'nuevaTareaPersonal' : 'nuevaTareaUniversidad';
-    let listaId = tipo === 'personal' ? 'listaPersonal' : 'listaUniversidad';
+document.addEventListener("DOMContentLoaded", function () {
+    const forms = document.querySelectorAll("form");
 
-    let input = document.getElementById(inputId);
-    let lista = document.getElementById(listaId);
+    forms.forEach(form => {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita que el formulario recargue la página
 
-    if (input.value.trim() !== "") {
-        let tarea = document.createElement("div");
-        tarea.classList.add("task");
+            const input = this.querySelector("input"); // Captura el input dentro del formulario
+            const lista = this.nextElementSibling; // Captura el <ul> siguiente al formulario
+            const tareaTexto = input.value.trim(); // Obtiene el texto del input sin espacios extras
 
-        let checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
+            if (tareaTexto !== "") {
+                const nuevaTarea = document.createElement("li");
 
-        let label = document.createElement("label");
-        label.textContent = input.value;
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
 
-        tarea.appendChild(checkbox);
-        tarea.appendChild(label);
-        lista.appendChild(tarea);
+                nuevaTarea.appendChild(checkbox);
+                nuevaTarea.appendChild(document.createTextNode(" " + tareaTexto));
 
-        input.value = ""; // Limpiar el campo después de agregar
-    }
-}
+                lista.appendChild(nuevaTarea); // Agrega la nueva tarea a la lista
+                input.value = ""; // Limpia el input
+            }
+        });
+    });
+});
